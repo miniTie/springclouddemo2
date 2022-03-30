@@ -1,0 +1,16 @@
+server:
+  port: 8080 # 端口
+spring:
+  application:
+    name: springcloudservice # 应用名称，会在Eureka中显示
+eureka:
+  instance:
+    hostname: eureka1
+  client:
+    service-url:   #与eureka server交互的地址，包括查询服务和注册服务
+      defaultZone: http://eureka1:8761/eureka/
+    #表示向注册中心注册自己
+    register-with-eureka: true
+    #表示需要去注册中心检索服务
+    fetch-registry: true
+

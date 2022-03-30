@@ -1,0 +1,14 @@
+server:
+  port: 8763 # 端口
+spring:
+  application:
+    name: eureka-server3 # 应用名称，会在Eureka中显示
+eureka:
+  instance:
+    hostname: eureka2003.pers.young
+  client:
+    service-url: #EurekaServer的地址，现在是自己的地址，如果是集群，需要加上其它Server的地址。
+      defaultZone: http://eureka1:8761/eureka/,http://eureka2:8762/eureka/
+    register-with-eureka: false
+    fetch-registry: false
+

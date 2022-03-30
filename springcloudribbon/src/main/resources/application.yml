@@ -1,0 +1,12 @@
+spring:
+  application:
+    #工程名称
+    name: springcloudribbon
+eureka:
+  client:
+    service-url:
+      #注册中心的url
+      defaultZone: http://eureka1:8761/eureka/
+server:
+  #端口
+  port: 8084
