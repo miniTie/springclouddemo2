@@ -13,7 +13,6 @@
         <option value="$PROJECT_DIR$/ribbon/pom.xml" />
         <option value="$PROJECT_DIR$/springcloudribbon/pom.xml" />
         <option value="$PROJECT_DIR$/springcloudconfigserver/pom.xml" />
-        <option value="$PROJECT_DIR$/springcloudconfigclient/pom.xml" />
       </list>
     </option>
   </component>
