@@ -31,6 +31,8 @@
         <module>springcloudprovider</module>
         <module>springcloudfeign</module>
         <module>springcloudribbon</module>
+        <module>springcloudconfigserver</module>
+        <module>springcloudconfigclient</module>
     </modules>
     <dependencyManagement>
         <dependencies>

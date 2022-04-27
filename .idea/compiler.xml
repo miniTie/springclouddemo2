@@ -13,9 +13,18 @@
         <module name="springcloudservice" />
         <module name="springcloudfeign" />
         <module name="springcloudribbon" />
+        <module name="springcloudconfigclient" />
+      </profile>
+      <profile name="Annotation profile for springclouddemo2" enabled="true">
+        <sourceOutputDir name="../springcloudconfigclient/target/generated-sources/annotations" />
+        <sourceTestOutputDir name="../springcloudconfigclient/target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="springcloudconfigserver" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="springcloudconfigclient" target="1.5" />
+      <module name="springcloudconfigserver" target="1.8" />
       <module name="springclouddemo2" target="1.8" />
       <module name="springcloudeureka1" target="1.8" />
       <module name="springcloudeureka2" target="1.8" />
@@ -28,6 +37,8 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="springcloudconfigclient" options="-parameters" />
+      <module name="springcloudconfigserver" options="-parameters" />
       <module name="springclouddemo2" options="-parameters" />
       <module name="springcloudeureka1" options="-parameters" />
       <module name="springcloudeureka2" options="-parameters" />
