@@ -1,0 +1,17 @@
+spring:
+  cloud:
+    config:
+      label: master #分支名
+      name: application #要拉取的文件名
+      profile: dev #那个环境的文件
+      discovery:
+        enabled: true #服务端的IP地址和端口
+        service-id: spring-cloud-config-server  #这里对应config-server的application-name
+
+eureka:
+  instance:
+    instance-id: spring-cloud-config-client #在eureka注册中心上显示的名字
+    prefer-ip-address: true  #在eureka上显示IP地址
+  client:
+    service-url:
+      defaultZone: http://eureka1:8761/eureka/

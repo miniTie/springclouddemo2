@@ -1,0 +1,7 @@
+server:
+  port: 9006
+spring:
+  application:
+    name: spring-cloud-config-client
+  #profiles:
+    #active: dev
