@@ -1,0 +1,26 @@
+server:
+  port: 9005
+
+spring:
+  application:
+    name: spring-cloud-config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/miniTie/springclouddemo2.git #git上的地址
+          #uri: git@github.com:miniTie/springclouddemo2.git #git上的地址
+          username: Young
+          password: 13591580435messi
+          search-paths:
+             - springclouddemo2 #仓库的包名
+             #- springclouddemo2/ #仓库的包名
+        default-label: master #分支名
+eureka:
+  instance:
+    #以IP地址注册到服务中心，相互注册使用IP地址
+    preferIpAddress: true
+    instance-id: spring-cloud-config-server
+  client:
+    serviceUrl:
+      defaultZone: http://eureka1:8761/eureka/
